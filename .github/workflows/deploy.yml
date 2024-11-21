@@ -47,4 +47,4 @@ jobs:
         run: |
           git checkout -b test123
           git merge main
-          git push origin test123
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} test123
