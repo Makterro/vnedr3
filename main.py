@@ -6,7 +6,7 @@ def calculate_monthly_payment(principal, annual_rate, years):
     total_payments = years * 12
     result = principal * (monthly_rate * (1 + monthly_rate) ** total_payments) / ((1 + monthly_rate) ** total_payments - 1)
     print(round(result, 2))
-    #11122
+    #111221
     return round(result, 2)
 
 
