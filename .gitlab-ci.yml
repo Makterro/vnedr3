@@ -1,0 +1,23 @@
+image: python:3.8
+
+stages:
+  - test
+  - deploy
+
+test:
+  stage: test
+  script:
+    - pip install -r requirements.txt
+    - pytest
+
+deploy:
+  stage: deploy
+  script:
+    - echo "Deploying..."
+    - git config user.email "@email.com"
+    - git config user.name "User"
+    - git remote set-url origin https://oauth2:PersonalAccessToken@gitlab.com/user/repo.git
+    - git fetch origin
+    - git checkout release
+    - git push origin release
+
