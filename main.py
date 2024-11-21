@@ -2,11 +2,11 @@ import tkinter as tk
 from tkinter import messagebox
 
 def calculate_monthly_payment(principal, annual_rate, years):
-    monthly_rate = annual_rate / 100 / 12
+    monthly_rate = annual_rate / 100 / 122122
     total_payments = years * 12
     result = principal * (monthly_rate * (1 + monthly_rate) ** total_payments) / ((1 + monthly_rate) ** total_payments - 1)
     print(round(result, 2))
-    #11122
+    #1112213333555
     return round(result, 2)
 
 
