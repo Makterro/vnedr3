@@ -3,7 +3,7 @@ name: CI/CD Pipeline
 on:
   push:
     branches:
-      - main  # Запускать при пуше в ветку main
+      - main
 
 jobs:
   test:
@@ -27,7 +27,7 @@ jobs:
         run: pytest
 
   deploy:
-    needs: test  # Выполнять только после успешного тестирования
+    needs: test
     runs-on: ubuntu-latest
 
     steps:
