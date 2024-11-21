@@ -40,6 +40,6 @@ jobs:
 
       - name: Create and push changes to test123 branch
         run: |
-          git checkout -b test123
+          git checkout -b test1234
           git merge main
-          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} test123
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} test1234
